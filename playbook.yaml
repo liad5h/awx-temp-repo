@@ -4,6 +4,6 @@
   become: no
   tasks:
   - debug:
-      msg: "{{ lookup('env', 'VAULT_ROLE_ID')
+      msg: "{{ lookup('env', 'VAULT_ROLE_ID') }}"
   - debug:
       msg: "{{ lookup('hashi_vault', 'secret=kv/liadsh')}}"
