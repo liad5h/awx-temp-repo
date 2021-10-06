@@ -6,6 +6,6 @@
     disk_size: "{{ custom_disk_size | default(0) }}"
   tasks:
   - debug:
-      msg: "this is the response {{ disk_size | default(1, true )}}"
+      msg: "this is the response {{ (disk_size | int) | default(1, true )}}"
 #  - include_role:
 #      name: consul_lookup
